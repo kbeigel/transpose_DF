@@ -13,23 +13,25 @@ The purpose of this script is to take an input file (in the format of 'example_i
 	sys
 	pathlib
 
+## Usage:
+	python3 transpose_DF.py -d <OUTPUT_DIRECTORY> -i <INPUTFILE> -o <OUTPUTFILE>
 
-## Input file:
+All arguments are required. transpose_DF.py will check to see if \<OUTPUT_DIRECTORY> exists; if it does not already exist, \<OUTPUT_DIRECTORY> will be created.
+
+## Input file
+- example_inputfile.txt is an example of an input file. (specified by *-i \<INPUTFILE>*)
 The format of the input file should be similar to 'example_inputfile.txt'. This script is intended for files with chromosome-position names as row names, sample IDs as column headers, and genotypes (as biallelic sites, formatted as 'XX', where each X is one of the following base codes: A, C, G, T, N).
 
 
 ## Output files:
 Output files are written to a directory using the *-d* argument. See **Usage** for additional information.
-- example_out_dir is a folder where output files will be written.
-	- example_outputfile.txt is the transposed data file.
+- example_out_dir is a folder where output files will be written. (specified by *-d \<OUTPUT_DIRECTORY>*)
+	- example_outputfile.txt is the transposed data file. (specified by -o)
 	- chrom_ID_list.txt is a list of the **column names** for the transposed data file. (Note: this list is made using the row names of the inputfile, which are the column names in the output file.)
 	- sample_ID_list.txt is a list of the **row names** for the trsnposed data file. (Note: this list is made using the row names of the outputfile.)
 
 
-## Usage:
-	python3 transpose_DF.py -d <OUTPUT DIRECTORY> -i <INPUTFILE> -o <OUTPUTFILE>
 
-All arguments are required. transpose_DF.py will check to see if \<OUTPUT DIRECTORY> exists; if it does not already exist, \<OUTPUT DIRECTORY> will be created.
 
 ## Notes:
 The script prints to console the row and column dimensions (excluding the row names/index and the column names/headers) for the inputfile and outputfile so that the user can verify that the files are being read and written correctly. (Note: the script does not perform any check or verfication itself; this is just to provide the user with the dimensions of the files. The files this script was originally made to transpose are often large in size, with too many rows or columns to count.)
