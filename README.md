@@ -1,5 +1,6 @@
 # transpose_DF
 
+## Overview
 Python 3 script for transposing a tab-separated text file. This script was developed to transpose output files from bcftools that have chromosome IDs as row names and sample IDs as column headers. Transposing the file so that chromosome IDs are column headers and sample IDs are row names is necessary for making objects of class 'genind' in R (package adegenet). However, this script could potentially be used for transposing other files, although this has not been tested.
 
 The purpose of this script is to take an input file (in the format of 'example_inputfile.txt'), transpose rows (index) and columns (columns), make lists of index names and column names, and write the results to a new files in a new directory.
