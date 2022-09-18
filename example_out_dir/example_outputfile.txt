@@ -1,0 +1,6 @@
+	chrom-pos_1	chrom-pos_2	chrom-pos_3	chrom-pos_4	chrom-pos_5	chrom-pos_6	chrom-pos_7	chrom-pos_8	chrom-pos_9	chrom-pos_10	chrom-pos_11	chrom-pos_12	chrom-pos_13	chrom-pos_14	chrom-pos_15	chrom-pos_16	chrom-pos_17	chrom-pos_18	chrom-pos_19	chrom-pos_20
+sample_1	AA	AA	AT	CC	AT	AA	CC	AA	AA	CC	AA	CC	AA	CC	AA	CT	CC	CT	AA	AA
+sample_2	AT	AT	AT	CG	AC	AT	CG	AT	AT	CG	AT	CG	AT	CG	AT	CT	CA	CA	AT	AT
+sample_3	TT	AT	AT	GG	AG	TT	GG	TT	TT	GG	TT	GG	TT	GG	TT	GG	GC	GT	TT	TT
+sample_4	AT	AT	AT	GG	AC	AT	GG	AT	AT	GG	AT	GG	AT	GG	AT	GG	GC	GC	AT	AT
+sample_5	AT	TT	TT	GG	AT	TT	GG	TT	TT	GG	TT	GG	TT	GG	TT	TG	GA	GG	TT	TT
