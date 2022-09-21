@@ -68,31 +68,31 @@ def Write_Index_List(infile, ID_type):
 
 ########################### MAIN ###########################
 
-	# Collect commandline arguments using Get_Arguments() function
-	arguments = Get_Arguments()
+# Collect commandline arguments using Get_Arguments() function
+arguments = Get_Arguments()
 
-	# Define output directory; check if directory already exists; if not, make the directory; requires Path from pathlib
-	dir = arguments.directory
-	if Path(dir).exists() == True:
-		pass
-	else:
-		Path(arguments.directory).mkdir()
+# Define output directory; check if directory already exists; if not, make the directory; requires Path from pathlib
+dir = arguments.directory
+if Path(dir).exists() == True:
+	pass
+else:
+	Path(arguments.directory).mkdir()
 
-	# Display input file dimensions using Print_Dimensions function
-	print('\nINPUT FILE DIMENSIONS (rows = chrom-pos, columns = samples)')
-	Print_Dimensions(arguments.inputfile)
+# Display input file dimensions using Print_Dimensions function
+print('\nINPUT FILE DIMENSIONS (rows = chrom-pos, columns = samples)')
+Print_Dimensions(arguments.inputfile)
 
-	# Write a list of row names for inputfile to a new file
-	Write_Index_List(arguments.inputfile, 'chrom')
+# Write a list of row names for inputfile to a new file
+Write_Index_List(arguments.inputfile, 'chrom')
 
-	# Read file to DataFrame and tranposed, write output to a new file
-	print('\nTRANSPOSING DATAFRAME')
-	Transpose_DF(arguments.inputfile)
+# Read file to DataFrame and tranposed, write output to a new file
+print('\nTRANSPOSING DATAFRAME')
+Transpose_DF(arguments.inputfile)
 
-	# Display output file dimensions using Print_Dimensions function
-	print('\nOUTPUT FILE DIMENSIONS (rows = samples, columns = chrom-pos)')
-	Print_Dimensions(dir+'/'+arguments.outputfile+'.txt')
+# Display output file dimensions using Print_Dimensions function
+print('\nOUTPUT FILE DIMENSIONS (rows = samples, columns = chrom-pos)')
+Print_Dimensions(dir+'/'+arguments.outputfile+'.txt')
 
-	# Write a list of row names for outputfile to a new file
-	print('\nWriting list of samples to txt file.')
-	Write_Index_List(dir+'/'+arguments.outputfile+'.txt', 'sample')
+# Write a list of row names for outputfile to a new file
+print('\nWriting list of samples to txt file.')
+Write_Index_List(dir+'/'+arguments.outputfile+'.txt', 'sample')
