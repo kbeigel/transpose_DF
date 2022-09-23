@@ -1,4 +1,4 @@
-	locus
+	chrom
 0	chrom-pos_1
 1	chrom-pos_2
 2	chrom-pos_3

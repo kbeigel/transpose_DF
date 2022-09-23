@@ -67,6 +67,8 @@ def Write_Index_List(infile, ID_type):
 
 ########################### MAIN ###########################
 
+if __name__ == '__main__':
+	
 	# Collect commandline arguments using Get_Arguments() function
 	arguments = Get_Arguments()
 
