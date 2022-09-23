@@ -25,9 +25,10 @@ def Get_Arguments():
 	# Read tab-separated file (infile) into pandas.DataFrame (with column 0 as index and row 0 as headers), transpose DataFrame,
 	# write transposed DataFrame object to new tab-separated file using commandline args ('/directory/outputfile'); requires pandas
 def Transpose_DF(infile):
-		with open(infile, 'r') as f:
-			outfile = (pd.read_csv(f, sep='\t', index_col=0, header=0)).T
-			outfile.to_csv('{}/{}.txt'.format(arguments.directory, arguments.outputfile), sep='\t')
+	
+	with open(infile, 'r') as f:
+		outfile = (pd.read_csv(f, sep='\t', index_col=0, header=0)).T
+		outfile.to_csv('{}/{}.txt'.format(arguments.directory, arguments.outputfile), sep='\t')
 
 
 # Print rows and column dimensions for a data frame (header and index not included in count)
@@ -68,7 +69,7 @@ def Write_Index_List(infile, ID_type):
 ########################### MAIN ###########################
 
 if __name__ == '__main__':
-	
+
 	# Collect commandline arguments using Get_Arguments() function
 	arguments = Get_Arguments()
 
